@@ -24,7 +24,9 @@ class TestIntegracaoEvento(unittest.TestCase):
         self.assertGreater(linhas, 0)
 
     def test_listar_evento(self):
-        pass
+        self.evento_base.salvar(self.conexao)
+        lista_eventos = Evento.listar(self.conexao)
+        self.assertGreater(len(lista_eventos),0)
         
     def tearDown(self):
         self.conexao.close()

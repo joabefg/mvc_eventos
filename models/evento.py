@@ -28,3 +28,10 @@ class Evento:
         linhas = cursor.rowcount
         cursor.close()
         return linhas
+
+    def listar(conexao):
+        cursor = conexao.cursor()
+        cursor.execute("SELECT * FROM evento")
+        lista_eventos = cursor.fetchall()
+        cursor.close()
+        return lista_eventos
