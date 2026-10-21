@@ -6,5 +6,5 @@ def cadastrar():
         return render_template("formulario.html")
     # enviar o form para /evento
     if request.method == "POST":
-        # cadastrar evento com os dados do form.
-        pass
+        # aqui iria a lógica de salva.
+        return {"mensagem": "Criado!"}, 201
