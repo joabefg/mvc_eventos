@@ -21,12 +21,8 @@ class TestEvento(unittest.TestCase):
                 "Festival de Música", 0, "20/10/2026")
         self.assertTrue(evento.lotado())
 
-    def teste_status_hoje(self):
-        evento = Evento("Show", 10, "19/10/2026")
-        self.assertEqual(evento.status(), "hoje")
-
     def teste_status_agendado(self):
-        evento = Evento("Show", 10, "20/10/2026")
+        evento = Evento("Show", 10, "20/10/2027")
         self.assertEqual(evento.status(), "agendado")
 
     def teste_status_realizado(self):

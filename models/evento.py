@@ -25,3 +25,6 @@ class Evento:
         VALUES (?,?,?)
         """, (self.nome, self.vagas, self.data))
         conexao.commit()
+        linhas = cursor.rowcount
+        cursor.close()
+        return linhas

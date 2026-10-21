@@ -20,5 +20,12 @@ class TestIntegracaoEvento(unittest.TestCase):
             "Show",100,"25/11/2026")
 
     def test_cadastro_evento(self):
+        linhas = self.evento_base.salvar(self.conexao)
+        self.assertGreater(linhas, 0)
+
+    def test_listar_evento(self):
+        pass
+        
+    def tearDown(self):
         self.conexao.close()
         self.evento_base = None
